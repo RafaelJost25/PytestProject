@@ -1,19 +1,17 @@
 import re
-from atividade import *
-def minpass():
+def minpass(senha):
     if len(senha) < 10:
-        print("ERRO! Requisitos de criação de senha não atingidos.")
-        quit() 
+        print("ERRO! Requisitos de criação de senha não atingidos.") 
     else:
         return
-def passx():
+def passx(senha):
     especiais = "^[a-zA-Z0-9_\s]*$"
     if re.match(especiais, senha):
         print("ERRO! Requisitos de criação de senha não atingidos.")
         quit() 
     else: 
         return
-def numpass():
+def numpass(senha):
     numero = False
     for num in senha:
         if num.isdigit():
@@ -21,7 +19,7 @@ def numpass():
             break
     if not numero:
         print("ERRO! Requisitos de criação de senha não atingidos.")
-def passmaiuscula(): 
+def passmaiuscula(senha): 
     maiuscula = False
     for x in senha:
         if x.isupper():
@@ -29,7 +27,7 @@ def passmaiuscula():
             return
     if not maiuscula:
         print("ERRO! Requisitos de criação de senha não atingidos.")   
-def passminuscula(): 
+def passminuscula(senha): 
     minuscula = False
     for x in senha:
         if x.islower():
