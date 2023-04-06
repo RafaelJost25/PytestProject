@@ -1,4 +1,6 @@
 from cryptographyFramework import *
+from valida import*
+
 
 initializeWrite()
 user = "Rafael"
